@@ -1,0 +1,360 @@
+Semana 1;1 a 5 de janeiro
+Sopa;
+Prato;
+Salada;
+Sobremesa;
+Pao;
+;
+Sopa;
+Prato;
+Salada;
+Sobremesa;
+Pao;
+;
+Sopa;Saloia
+Prato;Massada de Atum
+Salada;Alface, tomate e beterraba
+Sobremesa;Fruta da época (min. 3 variedades) 
+Pao;Pao de mistura
+;
+Sopa;Creme de legumes
+Prato;Frango estufado com ervilhas e arroz
+Salada;Tomate, milho e cebola
+Sobremesa;Fruta da época (min. 3 variedades) 
+Pao;Pao de mistura
+;
+Sopa;Grão com couve lombarda
+Prato; Bacalhau à Brás
+Salada;Alface, beterraba e cenoura
+Sobremesa;Fruta da época (min. 3 variedades) / Fruta assada
+Pao;Pao de mistura
+Semana 2;8 a 12 de janeiro
+Sopa;Couve branca com cenoura ripada
+Prato;Esparguete à Bolonhesa
+Salada;Alface, cebola e tomate
+Sobremesa;Fruta da época (min. 3 variedades) 
+Pao;Pao de mistura
+;
+Sopa;Feijão vermelho com hortaliça
+Prato;Pescada no forno com batata e brócolos cozidos
+Salada;Alface, milho e tomate
+Sobremesa;Fruta da época (min. 3 variedades)/pudim
+Pao;Pao de mistura
+;
+Sopa;Creme de abóbora com espinafres
+Prato;Coxas de frango assadas com Espirais e Cenoura
+Salada;Alface, pepino e tomate
+Sobremesa;Fruta da época (min. 3 variedades) 
+Pao;Pao de mistura
+;
+Sopa;Caldo verde
+Prato;Arroz de frutos do mar (abrótea, camarão e berbigão)
+Salada;Alface, beterraba e milho
+Sobremesa;Fruta da época (min. 3 variedades)/ Fruta cozida
+Pao;Pao de mistura
+;
+Sopa;Sopa da horta
+Prato;Jardineira de Vitela 
+Salada;Cenoura, couve roxa e pepino
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+Semana 3;15 a 19 de janeiro
+Sopa;Juliana
+Prato;Empadão de cavala com arroz, ervilhas e cenoura
+Salada;Alface, couve roxa e pepino
+Sobremesa;Fruta da época (min. 3 variedades) / Fruta assada
+Pao;Pao de mistura
+;
+Sopa;Espinafres
+Prato;Carne de porco estufada com grão, couve e macarrão
+Salada;Alface, tomate e milho
+Sobremesa;Fruta da época (min. 3 variedades) 
+Pao;Pao de mistura
+;
+Sopa;Lavrador
+Prato;Arroz de lulas com pimentos
+Salada;Alface, beterraba e milho
+Sobremesa;Fruta da época (min. 3 variedades)/ Gelatina
+Pao;Pao de mistura
+;
+Sopa;Creme de ervilhas com couve flor
+Prato;Perú assado com esparguete e feijão-verde
+Salada;Alface, cenoura e couve roxa
+Sobremesa;Fruta da época (min. 3 variedades) 
+Pao;Pao de mistura
+;
+Sopa;Feijão-verde
+Prato;Abrótea estufada com batata cozida
+Salada;Alface, pepino e tomate
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+Semana 4;22 a 26 de janeiro
+Sopa;Abóbora com massinhas
+Prato;Hambúrguer estufado com molho de cogumelos e massa espiral com legumes salteados
+Salada;Alface, milho e pepino
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+;
+Sopa;Grão com nabiças
+Prato;Filetes de pescada gratinados com ervas aromáticas com batata corada/cozida
+Salada;Alface, tomate e cebola
+Sobremesa;Fruta da época (min. 3 variedades)/ Fruta cozida
+Pao;Pao de mistura
+;
+Sopa;Creme de cenoura com couve branca
+Prato;Feijoada à Portuguesa com arroz
+Salada;Alface, pepino e couve-roxa
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+;
+Sopa;Feijão branco c/ espinafres
+Prato;Badejo de tomatada com batata e couve-flor cozidas
+Salada;Alface, beterraba e cenoura
+Sobremesa;Fruta da época ( min 3 variedades)/ Aletria
+Pao;Pao de mistura
+;
+Sopa;Legumes com ervilhas
+Prato;Bifes de frango panados no forno com arroz de cenoura
+Salada;Cenoura, couve roxa e tomate
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+Semana 5;29 de janeiro a 2 de fevereiro
+Sopa;Juliana
+Prato;Tortilha de camarão, ervilhas e legumes (cogumelos, tomate, cenoura e milho)
+Salada;Alface, tomate e cenoura
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+;
+Sopa;Minestrone
+Prato;Arroz de aves (peru e frango)
+Salada;Alface, couve em juliana e milho
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+;
+Sopa;Feijão vermelho com couve lombarda
+Prato;Salmão grelhado com batata e feijão-verde cozidos
+Salada;Alface, tomate e milho
+Sobremesa;Fruta da época (min. 3 variedades) / Fruta assada
+Pao;Pao de mistura
+;
+Sopa;Macedónia de legumes
+Prato;Perna de porco no forno com esparguete e salada tricolor
+Salada;Alface, pepino e beterraba
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+;
+Sopa;Creme de alho francês com couve-flor
+Prato;Carapau frito com arroz de feijão
+Salada;Alface, tomate e cebola
+Sobremesa;Fruta da época (min. 3 variedades) / Gelado
+Pao;Pao de mistura
+Semana 6;5 a 9 de fevereiro
+Sopa;Alho francês com curgete
+Prato;Febras de porco grelhadas com estufado de cogumelos e esparguete
+Salada;Alface, pepino e beterraba
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+;
+Sopa;Creme de ervilhas e cenoura
+Prato;Bacalhau Espiritual
+Salada;Cenoura, milho e tomate
+Sobremesa;Fruta da época (min. 3 variedades) / Arroz doce
+Pao;Pao de mistura
+;
+Sopa;Couve branca
+Prato;Frango estufado com cenoura e puré de batata
+Salada;Curgete, alface e cenoura
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+;
+Sopa;Espinafres com cenoura
+Prato;Cardeal no forno com molho de limão e ervas aromáticas e salada russa 
+Salada;Alface, cenoura e couve-roxa
+Sobremesa;Fruta da época (min. 3 variedades)/ Fruta cozida
+Pao;Pao de mistura
+;
+Sopa;Agrião
+Prato;Chili com arroz branco
+Salada;Alface, tomate e beterraba
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+Semana 7;12 a 16 de fevereiro
+Sopa;
+Prato;
+Salada;Carnaval
+Sobremesa;
+Pao;
+;
+Sopa;
+Prato;
+Salada;Carnaval
+Sobremesa;
+Pao;
+;
+Sopa;
+Prato;
+Salada;Carnaval
+Sobremesa;
+Pao;
+;
+Sopa;Feijão-verde com massinhas
+Prato;Strogonoff de frango com arroz
+Salada;Cenoura, couve-roxa e tomate
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+;
+Sopa;Grão com couve lombarda
+Prato;Badejo gratinado com batata assada/cozida com brócolos
+Salada;Alface, beterraba e milho
+Sobremesa;Fruta da época (min. 3 variedades) / Gelatina
+Pao;Pao de mistura
+Semana 8;19 a 23 de fevereiro
+Sopa;Alho-francês
+Prato;Almôndegas estufadas com esparguete e ervilhas
+Salada;Alface, tomate e cenoura
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+;
+Sopa;Legumes com ervilhas
+Prato;Carapau assado com batata assada/cozida
+Salada;Tomate, couve roxa e cebola
+Sobremesa;Fruta da época (min. 3 variedades) / Iogurte
+Pao;Pao de mistura
+;
+Sopa;Creme de abóbora com feijão verde
+Prato;Arroz de pato no forno à moda antiga
+Salada;Alface, beterraba e cenoura ralada
+Sobremesa;Fruta da época (min. 3 variedades) 
+Pao;Pao de mistura
+;
+Sopa;Camponesa
+Prato;Filetes de Pescada gratinados com puré de batata, cenoura e brócolos cozidos
+Salada;Tomate, milho e pepino
+Sobremesa;Fruta da época (min. 3 variedades)/ Fruta cozida
+Pao;Pao de mistura
+;
+Sopa;Caldo verde
+Prato;Bifinhos de porco de cebolada com arroz de cenoura
+Salada;Alface, tomate e couve roxa
+Sobremesa;Fruta da época (min. 3 variedades) 
+Pao;Pao de mistura
+Semana 9;26 de fevereiro a 2 de março
+Sopa;Nabo e cenoura com couve
+Prato;Atum com feijão-frade (atum, batata, ovo, e cenoura)
+Salada;Beterraba, cenoura e tomate
+Sobremesa;Fruta da época (min. 3 variedades) 
+Pao;Pao de mistura
+;
+Sopa;Feijão-verde
+Prato;Carne de vaca assada fatiada com esparguete
+Salada;Cenoura, couve-roxa e tomate
+Sobremesa;Fruta da época (min. 3 variedades) 
+Pao;Pao de mistura
+;
+Sopa;Lavrador
+Prato;Solha gratinada com macedónia de legumes e batata cozida
+Salada;Alface, cenoura e miho
+Sobremesa;Fruta da época (min. 3 variedades) / Fruta assada
+Pao;Pao de mistura
+;
+Sopa;Sopa de tomate
+Prato;Perna de frango assada com arroz branco
+Salada;Tomate, alface e pepino
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+;
+Sopa;Nabiças com feijão-frade
+Prato;Bacalhau com broa
+Salada;Alface, milho e cebola
+Sobremesa;Fruta da época (min. 3 variedades) / Pudim
+Pao;Pao de mistura
+Semana 10;5 a 9 de março
+Sopa;Primavera
+Prato;Febras de porco grelhadas com estufado de ervilhas e massa fusilli
+Salada;Beterraba, cenoura e tomate
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+0;
+Sopa;Abóbora com massinhas
+Prato;Salada de abrótea e camarão com batata, ervilhas e cenoura
+Salada;Curgete, tomate e pepino
+Sobremesa;Fruta da época (min. 3 variedades)/ Gelatina com frutas
+Pao;Pao de mistura
+;
+Sopa;Creme de alho francês com cenoura e curgete
+Prato;Perna de peru assada com arroz de legumes (milho e brócolos)
+Salada;Alface, cenoura e milho
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+;
+Sopa;Grão com feijão-verde
+Prato;Pescada no forno com batata corada
+Salada;Alface, tomate e couve roxa
+Sobremesa;Fruta da época (min. 3 variedades)/ Fruta cozida
+Pao;Pao de mistura
+;
+Sopa;Saloia
+Prato;Arroz de carnes mistas (Vaca e porco)
+Salada;Alface, cenoura e milho
+Sobremesa;Fruta da época (min. 3 variedades) 
+Pao;Pao de mistura
+Semana 11;12 a 16 de março
+Sopa;Espinafres
+Prato;Massa de atum com legumes (cenoura, couve flor e ervilhas)
+Salada;Alface, milho e cebola
+Sobremesa;Fruta da época (min. 3 variedades) / Fruta assada
+Pao;Pao de mistura
+;
+Sopa;Creme de legumes
+Prato;Frango assado com arroz de cenoura
+Salada;Alface, beterraba e cenoura
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+;
+Sopa;Feijão branco com couve lombarda
+Prato;Badejo estufado(4) com batata, cenoura e ervilhas
+Salada;Couve em juliana, pepino e tomate
+Sobremesa;Fruta da época (min. 3 variedades) 
+Pao;Pao de mistura
+;
+Sopa;Macedónia de legumes
+Prato;Rolo de carne assado no forno com esparguete
+Salada;Alface, milho e couve roxa
+Sobremesa;Fruta da época (min. 3 variedades) / Arroz doce
+Pao;Pao de mistura
+;
+Sopa;Caldo verde
+Prato;Meia desfeita de bacalhau
+Salada;Tomate, milho e cebola
+Sobremesa;Fruta da época (min. 3 variedades) 
+Pao;Pao de mistura
+Semana 12;19 a 23 de março
+Sopa;Alho francês com curgete
+Prato;Salada de frango (massa, frango, ovo, cenoura e ervilhas)
+Salada;Pepino, tomate e couve roxa
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+;
+Sopa;Portuguesa
+Prato;Filetes de peixe gratinados com puré de batata
+Salada;Alface, beterraba e milho
+Sobremesa;Fruta da época (min. 3 variedades)/ Fruta cozida
+Pao;Pao de mistura
+;
+Sopa;Sopa da Horta
+Prato;Strogonoff misto (porco e vaca) com arroz branco
+Salada;Alface, cenoura e cebola
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
+;
+Sopa;Creme de feijão-verde
+Prato;Massinha de peixe com coentros
+Salada;Couve-roxa, cenoura e tomate
+Sobremesa;Fruta da época (min. 3 variedades) / Iogurte
+Pao;Pao de mistura
+;
+Sopa;Juliana
+Prato;Feijoada à Transmontana
+Salada;Alface, tomate e cenoura
+Sobremesa;Fruta da época (min. 3 variedades)
+Pao;Pao de mistura
