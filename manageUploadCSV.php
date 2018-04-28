@@ -25,7 +25,6 @@ form {border: 2px solid #f1f1f1;}
     clear: both;
 }
 
-
 button {
     background-color: #4CAF50;
     color: white;
@@ -33,7 +32,8 @@ button {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 50%;
+	font-size:1em;
 }
 
 button:hover {
@@ -44,6 +44,23 @@ button:hover {
     width: auto;
     padding: 10px 18px;
     background-color: #f44336;
+	width: 50%;
+}
+
+
+.w3-check,.w3-radio {
+	width:12px;
+	height:24px;
+	position:relative;
+	top:6px;
+}
+
+.w3-select {
+	padding:9px 0;
+	width:20%;
+	border:none;
+	border-bottom:1px solid #ccc;
+		font-size: 1.0em;
 }
 
 .imgcontainer {
@@ -65,8 +82,32 @@ span.psw {
     padding-top: 16px;
 }
 
-h2 {
+h2, p {
 	text-align:center;
+}
+
+hr {
+	border:0;border-top:1px solid #eee;margin:20px 0
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
 }
 
 /* Change styles for span and cancel button on extra small screens */
@@ -139,6 +180,7 @@ h2 {
 		}
 	?>
     <a href="#">SHOW MEAL!</a>
+	<a href="manager.php">VOLTAR</a>
 	<p>&nbsp;</p>
   </div>
 
@@ -154,28 +196,42 @@ h2 {
 			echo "Hey ".$username."!<br>&nbsp;";
 		}
   ?>
-<div class="row">
-  <div class="column" style="background-color:#aaa;">
-    <h2>UPLOAD CSV & PARSER</h2>
-	<p>&nbsp;</p>
-    <p>Envio do CSV para realizar processo de Parsing.</p>
-	<p>Parser do CSV e inserção de registos na BD.</p>
-	<p>&nbsp;</p>
-	<div class="imgcontainer">
-		<p><a href='manageUploadCSV.php'><img src="upload.png" alt="Upload"></a></p>
+  
+  <form action="managerUploaderParser.php" enctype="multipart/form-data" method="post">
+
+  <h2>UPLOAD CSV & PARSER</h2>
+  	<hr>
+	<p><strong>Período Escolar:</strong>&nbsp;&nbsp;&nbsp;
+	<input class="w3-radio" type="radio" name="periodo" value="1" checked>
+		<label>1ºPeríodo</label>&nbsp;&nbsp;&nbsp;
+		<input class="w3-radio" type="radio" name="periodo" value="2">
+		<label>2ºPeríodo</label>&nbsp;&nbsp;&nbsp;
+		<input class="w3-radio" type="radio" name="periodo" value="3">
+		<label>3ºPeríodo</label>
+
+	</p>
+	<p><strong>Tipo de Ementa:</strong>&nbsp;&nbsp;&nbsp;
+		<select class="w3-select" name="tipo">
+			<option value="" disabled selected>Escolher tipo...</option>
+			<option value="1">Mediterrânica</option>
+			<option value="2">Vegetariana</option>
+			<option value="3">Alergia a Ovo</option>
+			<option value="4">Alergia a Leite</option>
+			<option value="5">Alergia a Ovo e Leite</option>
+			<option value="6">Alergia a Glúten</option>
+			<option value="0">Todas</option>
+		</select>&nbsp;&nbsp;&nbsp;&nbsp;
+	<strong>Ficheiro CSV:</strong>&nbsp;&nbsp;&nbsp;
+		
+		<input type="file" name="fileToUpload" id="fileToUpload">
+
+	</p>
+	<hr>
+	<div class="container">
+		<button type="submit" name="submit">Enviar CSV</button>
+		<button type="reset" class="cancelbtn">Limpar dados</button>
 	</div>
-  </div>
-  <div class="column" style="background-color:#bbb;">
-    <h2>REGISTOS DE REFEIÇÃO</h2>
-	<p>&nbsp;</p>
-    <p>Tarefas CRUD de registos existentes na BD.</p>
-	<p>Configurar exibição de registos de refeição.</p>
-	<p>&nbsp;</p>
-		<div class="imgcontainer">
-	<p><a href='managerDatabase.php'><img src="database.png" alt="Database"></a></p>
-	</div>
-  </div>
-</div>
+</form>
 
   </div>
 
