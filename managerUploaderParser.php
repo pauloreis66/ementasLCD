@@ -1,7 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 2px solid #f1f1f1;}
@@ -160,6 +161,7 @@ button:hover {
 <p><img src="aeblogo150.png" alt="Logo"></p>
     <a href="index.html">HOME</a>
 	<?php
+		ini_set('default_charset','UTF-8');
 		session_start();
 		if (isset($_SESSION['username'])) {
 			echo "<a href='logout.php'>LOGOUT</a>";
@@ -198,6 +200,15 @@ button:hover {
 		<tr>
 
 	<?php
+	
+	function utf8_fopen_read($fileName) { 
+		$fc = iconv('ISO-8859-1', 'UTF-8', file_get_contents($fileName)); 
+		$handle=fopen("php://memory", "rw"); 
+		fwrite($handle, $fc); 
+		fseek($handle, 0); 
+		return $handle; 
+	} 
+
 		//tipos de ficheiros permitidos
 		$csv_mimetypes = array('text/csv', 'text/plain', 'application/csv', 'text/comma-separated-values', 'application/excel', 'application/vnd.ms-excel', 'application/vnd.msexcel', 'text/anytext', 'application/octet-stream', 'application/txt');
 
@@ -254,25 +265,129 @@ button:hover {
 						$row = 1;
 						$file2parse = "uploads/" . $storagename;
 						//variaveis para refeições
+						$periodo=2;
+						$tipo=1;
+						$dataini='';
+						
 						$semana=0;
+						$dia='';
 						$sopa='';
 						$prato='';
 						$salada='';
 						$sobremesa='';
 						$pao='';
-						if (($handle = fopen($file2parse, "r")) !== FALSE) {
+						
+						$sai=0;
+						$meals=0;
+						
+						//echo "Pão Terça";
+						
+						//if (($handle = fopen($file2parse, "r")) !== FALSE) {
+						
+						if (($handle = utf8_fopen_read($file2parse)) !== FALSE) {
 							while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
 								$num = count($data);
-								echo "$num fields in line $row: <br />\n";
+								//echo "$num fields in line $row: <br />\n";
 								$row++;
+								
+								
 								for ($c=0; $c < $num; $c++) {
-									//echo $data[$c] . "<br />\n";
-									//if (strlen($data[$c]>0)) {
-										echo $data[$c] . " ";
-									//}
+									//echo $c . ":" .$data[$c] . "<br />\n";
+									
+									//apenas processa campos com comprimento maior que 0
+									if (strlen($data[$c])>0) {
+										echo $c . ":" .$data[$c] . "<br />\n";
+										
+									
+										//refeição diária
+										$campo = strtolower($data[$c]);
+										switch ($campo) {
+												case "sopa":
+													if (strlen($data[$c+1])>0) {
+														$sopa= $data[$c+1];
+														echo "sopa:".$sopa."<br />";
+													}
+													else {
+														$sopa='';
+													}
+													$sai=1;
+													$meals=$meals+1;
+													break;
+													
+												case "prato":
+													if (strlen($data[$c+1])>0) {
+														$prato= $data[$c+1];
+														echo "prato:".$prato."<br />";
+													}
+													else {
+														$prato='';
+													}												
+													$sai=1;
+													$meals=$meals+1;
+													break;
+													
+												case "salada":
+													if (strlen($data[$c+1])>0) {
+														$salada= $data[$c+1];
+														echo "salada:".$salada."<br />";
+													}
+													else {
+														$salada='';
+													}
+													$sai=1;
+													$meals=$meals+1;
+													break;
 
+												case "sobremesa":
+													if (strlen($data[$c+1])>0) {
+														$sobremesa= $data[$c+1];
+														echo "sobremesa:".$sobremesa."<br />";
+													}
+													else {
+														$sobremesa='';
+													}
+													$sai=1;
+													$meals=$meals+1;
+													break;
+
+												case "pão":
+													if (strlen($data[$c+1])>0) {
+														$pao= $data[$c+1];
+														echo "pao:".$pao."<br />";
+													}
+													else {
+														$pao='';
+													}
+													$sai=1;
+													$meals=$meals+1;
+													break;
+													
+												//default:
+														
+													
+										}
+										
+									}
+									//se já armazenou o valor da refeição sai do ciclo for
+									if ($sai==1) {
+										//se concluiu os 5 pratos da refeição exibe-os
+										echo "aqui:".$meals;
+										if ($meals==5) {
+											echo "<br />/" .$sopa."/".$prato."/".$salada."/".$sobremesa."/".$pao."/<br />";
+											//limpa as variáveis
+											$sopa='';
+											$prato='';
+											$salada='';
+											$sobremesa='';
+											$pao='';	
+											$meals=0;
+										}
+										break;
+									}
 								}
+								
 								echo "<br />\n";
+								$sai=0;
 							}
 							fclose($handle);
 						}
