@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 2px solid #f1f1f1;}
@@ -60,7 +61,7 @@ button:hover {
 	width:20%;
 	border:none;
 	border-bottom:1px solid #ccc;
-		font-size: 1.0em;
+	font-size: 1.0em;
 }
 
 .imgcontainer {
@@ -171,6 +172,7 @@ button:hover {
 <p><img src="aeblogo200.png" alt="Logo"></p>
     <a href="index.html">HOME</a>
 	<?php
+		ini_set('default_charset','UTF-8');
 		session_start();
 		if (isset($_SESSION['username'])) {
 			echo "<a href='logout.php'>LOGOUT</a>";
@@ -197,7 +199,7 @@ button:hover {
 		}
   ?>
   
-  <form action="managerUploaderParser.php" enctype="multipart/form-data" method="post">
+  <form action="managerUploaderParser.php" enctype="multipart/form-data" method="post" accept-charset="utf-8">
 
   <h2>UPLOAD CSV & PARSER</h2>
   	<hr>
@@ -208,8 +210,8 @@ button:hover {
 		<label>2ºPeríodo</label>&nbsp;&nbsp;&nbsp;
 		<input class="w3-radio" type="radio" name="periodo" value="3">
 		<label>3ºPeríodo</label>
-
 	</p>
+	
 	<p><strong>Tipo de Ementa:</strong>&nbsp;&nbsp;&nbsp;
 		<select class="w3-select" name="tipo">
 			<option value="" disabled selected>Escolher tipo...</option>
@@ -221,10 +223,11 @@ button:hover {
 			<option value="6">Alergia a Glúten</option>
 			<option value="0">Todas</option>
 		</select>&nbsp;&nbsp;&nbsp;&nbsp;
-	<strong>Ficheiro CSV:</strong>&nbsp;&nbsp;&nbsp;
-		
+		<strong>Data de início:</strong>&nbsp;&nbsp;&nbsp;<input type="date" name="dataini" class="w3-select">
+	</p>
+	
+	<p><strong>Ficheiro CSV:</strong>&nbsp;&nbsp;&nbsp;
 		<input type="file" name="fileToUpload" id="fileToUpload">
-
 	</p>
 	<hr>
 	<div class="container">

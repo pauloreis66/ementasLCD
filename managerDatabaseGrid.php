@@ -282,7 +282,7 @@ button:hover {
 			
 		}
 		
-		echo $navegar;
+		echo "<img src='exscript.png' alt='sql script executado'> ".$navegar;
 		$result=mysqli_query($ligacao, $consulta) or die(mysqli_error($ligacao));
 		$resultado = mysqli_query($ligacao, $consulta);
 		

@@ -169,6 +169,8 @@ button:hover {
 		else {
 			echo "<a href='login.php'>LOGIN</a>";
 		}
+		require('connect.php');
+		
 	?>
     <a href="#">SHOW MEAL!</a>
 	<a href="manageUploadCSV.php">VOLTAR</a>
@@ -214,11 +216,16 @@ button:hover {
 
 	
 		if (isset($_POST["submit"]) ) {
+			
+			if ((empty($_POST['periodo'])) OR (empty($_POST['tipo'])) OR (empty($_POST['dataini']))) {
+				header('Location: managerUploadCSV.php');
+				exit;
+			}
 	
 			if (isset($_FILES["fileToUpload"])) {
 				
 				if (!in_array($_FILES['fileToUpload']['type'], $csv_mimetypes)) {
-					header('Location: managerParser.php');
+					header('Location: managerUploadCSV.php');
 					exit;
 				}
 		
@@ -230,12 +237,17 @@ button:hover {
 						//exibir detalhes do envio
 						$p='';
 						$t='';
+						$d='';
 						if (isset($_POST['periodo'])) {
 							$p=$_POST['periodo'];
 						}
 						if (isset($_POST['tipo'])) {
 							$t=$_POST['tipo'];
 						}
+						if (isset($_POST['dataini'])) {
+							$d=$_POST['dataini'];
+						}
+						
 						
 						echo "<td>".$p."</td><td>".$t."</td>";
 						
@@ -257,7 +269,7 @@ button:hover {
 							$token = date("YmdHis");					
 							$storagename = $token.".txt";
 							move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], "uploads/" . $storagename);
-							echo "Guardado: uploads/".$storagename."<br />";
+							echo "<img src='exscript.png' alt='csv enviado'>Guardado: uploads/".$storagename."<br />";
 							echo "</td>";
 							
 						//my parser
@@ -265,12 +277,11 @@ button:hover {
 						$row = 1;
 						$file2parse = "uploads/" . $storagename;
 						//variaveis para refeições
-						$periodo=2;
-						$tipo=1;
-						$dataini='';
+											
+						$dia=1;
+						$dataini = $d;
+						$semana = 1;
 						
-						$semana=0;
-						$dia='';
 						$sopa='';
 						$prato='';
 						$salada='';
@@ -280,16 +291,12 @@ button:hover {
 						$sai=0;
 						$meals=0;
 						
-						//echo "Pão Terça";
-						
-						//if (($handle = fopen($file2parse, "r")) !== FALSE) {
 						
 						if (($handle = utf8_fopen_read($file2parse)) !== FALSE) {
 							while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
 								$num = count($data);
 								//echo "$num fields in line $row: <br />\n";
 								$row++;
-								
 								
 								for ($c=0; $c < $num; $c++) {
 									//echo $c . ":" .$data[$c] . "<br />\n";
@@ -298,14 +305,13 @@ button:hover {
 									if (strlen($data[$c])>0) {
 										echo $c . ":" .$data[$c] . "<br />\n";
 										
-									
 										//refeição diária
-										$campo = strtolower($data[$c]);
+										$campo = $data[$c];
 										switch ($campo) {
-												case "sopa":
+												case "Sopa":
 													if (strlen($data[$c+1])>0) {
 														$sopa= $data[$c+1];
-														echo "sopa:".$sopa."<br />";
+														//echo "sopa:".$sopa."<br />";
 													}
 													else {
 														$sopa='';
@@ -314,10 +320,10 @@ button:hover {
 													$meals=$meals+1;
 													break;
 													
-												case "prato":
+												case "Prato":
 													if (strlen($data[$c+1])>0) {
 														$prato= $data[$c+1];
-														echo "prato:".$prato."<br />";
+														//echo "prato:".$prato."<br />";
 													}
 													else {
 														$prato='';
@@ -326,10 +332,10 @@ button:hover {
 													$meals=$meals+1;
 													break;
 													
-												case "salada":
+												case "Salada":
 													if (strlen($data[$c+1])>0) {
 														$salada= $data[$c+1];
-														echo "salada:".$salada."<br />";
+														//echo "salada:".$salada."<br />";
 													}
 													else {
 														$salada='';
@@ -338,10 +344,10 @@ button:hover {
 													$meals=$meals+1;
 													break;
 
-												case "sobremesa":
+												case "Sobremesa":
 													if (strlen($data[$c+1])>0) {
 														$sobremesa= $data[$c+1];
-														echo "sobremesa:".$sobremesa."<br />";
+														//echo "sobremesa:".$sobremesa."<br />";
 													}
 													else {
 														$sobremesa='';
@@ -350,10 +356,10 @@ button:hover {
 													$meals=$meals+1;
 													break;
 
-												case "pão":
+												case "Pão":
 													if (strlen($data[$c+1])>0) {
 														$pao= $data[$c+1];
-														echo "pao:".$pao."<br />";
+														//echo "pao:".$pao."<br />";
 													}
 													else {
 														$pao='';
@@ -371,16 +377,64 @@ button:hover {
 									//se já armazenou o valor da refeição sai do ciclo for
 									if ($sai==1) {
 										//se concluiu os 5 pratos da refeição exibe-os
-										echo "aqui:".$meals;
+										//echo "aqui:".$meals;
 										if ($meals==5) {
-											echo "<br />/" .$sopa."/".$prato."/".$salada."/".$sobremesa."/".$pao."/<br />";
-											//limpa as variáveis
+											
+											switch($dia) {
+												case 1: $diasemana='Segunda';
+														break;
+
+												case 2: $diasemana='Terça';
+														break;
+														
+												case 3: $diasemana='Quarta';
+														break;			
+
+												case 4: $diasemana='Quinta';
+														break;		
+
+												case 5: $diasemana='Sexta';
+														break;
+														
+											}
+											
+											echo "<br />[".$p."/".$t."/".$semana."/".$dataini."/".$diasemana."/" .$sopa."/".$prato."/".$salada."/".$sobremesa."/".$pao."]<br />";
+											
+											//registar na base de dados
+											$mostrar=1;
+											$feriado=0;
+											$consulta = "INSERT INTO ementas1 (periodo, tipo, semana, data, dia, sopa, prato, salada, sobremesa, pao, mostrar, feriado) VALUES ('$p', '$t', '$semana', '$dataini', '$diasemana', '$sopa', '$prato', '$salada', '$sobremesa', '$pao', '$mostrar', '$feriado')";
+											$resultado = mysqli_query($ligacao, $consulta);
+											if (($resultado) !=1) {
+												//caso não tenha sido inseridos com sucesso os dados
+												echo "Erro ao inserir novo registo: " . $resultado . "<br>" . mysqli_error($ligacao);
+											}
+											else {
+												echo "Inserido novo registo com sucesso. ";
+											}
+
+											//limpa as variáveis das refeições
 											$sopa='';
 											$prato='';
 											$salada='';
 											$sobremesa='';
 											$pao='';	
+											
+											//atualiza as variáveis de controlo semanal
+											if ($diasemana=='Sexta') {
+												$dataini=date('Y-m-d',strtotime($dataini . "+3 days"));
+												//$dataini=$dataini+3;
+												$dia=1;
+												$semana++;
+											} else {
+												$dia++;
+												//$dataini=$dataini+1;
+												$dataini=date('Y-m-d',strtotime($dataini . "+1 days"));
+											}
+											
 											$meals=0;
+											$sai=0;
+											
 										}
 										break;
 									}
