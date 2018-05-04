@@ -131,10 +131,10 @@ h3 {
 <?php
 
 function ValidaData($dat){
-	$data = explode("/","$dat"); // fatia a string $dat em pedados, usando / como referência
-	$d = $data[0];
+	$data = explode("/","$dat"); // fatia a string $dat em pedaços, usando / como referência
+	$y = $data[0];
 	$m = $data[1];
-	$y = $data[2];
+	$d = $data[2];
 
 	// verifica se a data é válida!
 	// 1 = true (válida)
@@ -153,6 +153,7 @@ require('connect.php');
 $diasemana = array('domingo', 'segunda', 'terça', 'quarta', 'quinta', 'sexta', 'sábado');
 $meses = array( 'JANEIRO', 'FEVEREIRO', 'MARÇO', 'ABRIL', 'MAIO', 'JUNHO', 'JULHO', 'AGOSTO', 'SETEMBRO', 'OUTUBRO', 'NOVEMBRO', 'DEZEMBRO´');
 
+//não foi enviado uma data pelo url
 if (!isset($_GET['data'])) {
 	$MES = $meses[date("n")-1];
 	$DIA = date("j");
@@ -161,9 +162,10 @@ if (!isset($_GET['data'])) {
 	$SEMANA = $diasemana[$diasemana_numero];
 }
 else {
+	//foi enviada uma data pelo url
 	$data = ValidaData($_GET['data']);
 	$dataarray = explode("/","$data");
-	$DIA = $dataarray[0];
+	$DIA = $dataarray[2];
 	$m = $dataarray[1];
 	$MES = $meses[$m-1];
 	$data2 = str_replace('/', '-', $data);
@@ -171,7 +173,13 @@ else {
 	$diasemana_numero = date('w', strtotime($data));
 	$SEMANA = $diasemana[$diasemana_numero];
 }
-$t=1;
+
+//verifica que tipo de ementa foi enviada pelo url
+if (!isset($_GET['t'])) {
+	$t=1;
+} else {
+	$t=$_GET['t'];
+	}
 
 #$consulta = "SELECT * FROM ementas1 WHERE tipo=" .$t. " AND DATE_FORMAT(data,'%Y-%m-%d') = " .$data;
 $consulta = "SELECT * FROM ementas1 WHERE tipo=" .$t. " AND data LIKE '" .$data. "%'";

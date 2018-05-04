@@ -172,7 +172,7 @@ button:hover {
 		require('connect.php');
 		
 	?>
-    <a href="#">SHOW MEAL!</a>
+    <a href="manageShowMeal.php">SHOW MEAL!</a>
 	<a href="manageUploadCSV.php">VOLTAR</a>
 	<p>&nbsp;</p>
   </div>
@@ -295,15 +295,15 @@ button:hover {
 						if (($handle = utf8_fopen_read($file2parse)) !== FALSE) {
 							while (($data = fgetcsv($handle, 1000, ";")) !== FALSE) {
 								$num = count($data);
-								//echo "$num fields in line $row: <br />\n";
+								////echo "$num fields in line $row: <br />\n";
 								$row++;
 								
 								for ($c=0; $c < $num; $c++) {
-									//echo $c . ":" .$data[$c] . "<br />\n";
+									////echo $c . ":" .$data[$c] . "<br />\n";
 									
 									//apenas processa campos com comprimento maior que 0
 									if (strlen($data[$c])>0) {
-										echo $c . ":" .$data[$c] . "<br />\n";
+										////echo $c . ":" .$data[$c] . "<br />\n";
 										
 										//refeição diária
 										$campo = $data[$c];
@@ -311,7 +311,6 @@ button:hover {
 												case "Sopa":
 													if (strlen($data[$c+1])>0) {
 														$sopa= $data[$c+1];
-														//echo "sopa:".$sopa."<br />";
 													}
 													else {
 														$sopa='';
@@ -323,7 +322,6 @@ button:hover {
 												case "Prato":
 													if (strlen($data[$c+1])>0) {
 														$prato= $data[$c+1];
-														//echo "prato:".$prato."<br />";
 													}
 													else {
 														$prato='';
@@ -335,7 +333,6 @@ button:hover {
 												case "Salada":
 													if (strlen($data[$c+1])>0) {
 														$salada= $data[$c+1];
-														//echo "salada:".$salada."<br />";
 													}
 													else {
 														$salada='';
@@ -347,7 +344,6 @@ button:hover {
 												case "Sobremesa":
 													if (strlen($data[$c+1])>0) {
 														$sobremesa= $data[$c+1];
-														//echo "sobremesa:".$sobremesa."<br />";
 													}
 													else {
 														$sobremesa='';
@@ -359,7 +355,6 @@ button:hover {
 												case "Pão":
 													if (strlen($data[$c+1])>0) {
 														$pao= $data[$c+1];
-														//echo "pao:".$pao."<br />";
 													}
 													else {
 														$pao='';
@@ -377,7 +372,6 @@ button:hover {
 									//se já armazenou o valor da refeição sai do ciclo for
 									if ($sai==1) {
 										//se concluiu os 5 pratos da refeição exibe-os
-										//echo "aqui:".$meals;
 										if ($meals==5) {
 											
 											switch($dia) {
@@ -423,12 +417,10 @@ button:hover {
 											//atualiza as variáveis de controlo semanal
 											if ($diasemana=='Sexta') {
 												$dataini=date('Y-m-d',strtotime($dataini . "+3 days"));
-												//$dataini=$dataini+3;
 												$dia=1;
 												$semana++;
 											} else {
 												$dia++;
-												//$dataini=$dataini+1;
 												$dataini=date('Y-m-d',strtotime($dataini . "+1 days"));
 											}
 											
@@ -440,19 +432,19 @@ button:hover {
 									}
 								}
 								
-								echo "<br />\n";
+								//echo "<br />\n";
 								$sai=0;
 							}
 							fclose($handle);
 						}
-						echo "</td></tr>";
+						echo "---FIM DE TAREFA DE PARSING---</td></tr>";
 						//end parser
 						}
 						
 					
 				}
 			} else {
-						echo "<td colspan='3'>No file selected.<br /></td>";
+						echo "<td colspan='3'>Nenhum ficheiro selecionado.<br /></td>";
 				}
 		}
 		

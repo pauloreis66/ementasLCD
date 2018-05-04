@@ -138,7 +138,7 @@ h2 {
 			echo "<a href='login.php'>LOGIN</a>";
 		}
 	?>
-    <a href="#">SHOW MEAL!</a>
+    <a href="manageShowMeal.php">SHOW MEAL!</a>
 	<p>&nbsp;</p>
   </div>
 

@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <style>
 body {font-family: Arial, Helvetica, sans-serif;}
 form {border: 2px solid #f1f1f1;}
@@ -60,7 +61,7 @@ button:hover {
 	width:20%;
 	border:none;
 	border-bottom:1px solid #ccc;
-		font-size: 1.0em;
+	font-size: 1.0em;
 }
 
 .imgcontainer {
@@ -171,6 +172,7 @@ button:hover {
 <p><img src="aeblogo200.png" alt="Logo"></p>
     <a href="index.html">HOME</a>
 	<?php
+		ini_set('default_charset','UTF-8');
 		session_start();
 		if (isset($_SESSION['username'])) {
 			echo "<a href='logout.php'>LOGOUT</a>";
@@ -197,20 +199,21 @@ button:hover {
 		}
   ?>
   
-  
-  <form action="managerDatabaseGrid.php" method="POST">
-  <h2>REGISTOS DE REFEIÇÃO</h2>
+  <form action="showmeal.php" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+
+  <h2>SHOW MEAL!</h2>
   	<hr>
+	<!---
 	<p><strong>Período Escolar:</strong>&nbsp;&nbsp;&nbsp;
 	<input class="w3-radio" type="radio" name="periodo" value="1" checked>
 		<label>1ºPeríodo</label>&nbsp;&nbsp;&nbsp;
 		<input class="w3-radio" type="radio" name="periodo" value="2">
 		<label>2ºPeríodo</label>&nbsp;&nbsp;&nbsp;
 		<input class="w3-radio" type="radio" name="periodo" value="3">
-		<label>3ºPeríodo</label>&nbsp;&nbsp;&nbsp;
-		<input class="w3-radio" type="radio" name="periodo" value="0" disabled>
-		<label>Todos (Disabled)</label>
+		<label>3ºPeríodo</label>
 	</p>
+	-->
+	<p>&nbsp;</p>
 	<p><strong>Tipo de Ementa:</strong>&nbsp;&nbsp;&nbsp;
 		<select class="w3-select" name="tipo">
 			<option value="" disabled selected>Escolher tipo...</option>
@@ -221,34 +224,16 @@ button:hover {
 			<option value="5">Alergia a Ovo e Leite</option>
 			<option value="6">Alergia a Glúten</option>
 			<option value="0">Todas</option>
-		</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-	<strong>Semana:</strong>&nbsp;&nbsp;&nbsp;
-		<select class="w3-select" name="semana">
-			<option value="" disabled selected>Escolher semana</option>
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-			<option value="9">9</option>
-			<option value="10">10</option>
-			<option value="11">11</option>
-			<option value="12">12</option>
-			<option value="13">13</option>
-			<option value="14">14</option>
-			<option value="15">15</option>
-		</select>
+		</select>&nbsp;&nbsp;&nbsp;&nbsp;
+		<strong>Data de exibição:</strong>&nbsp;&nbsp;&nbsp;<input type="date" name="dataini" class="w3-select">
 	</p>
+	
 	<hr>
 	<div class="container">
-		<button type="submit">Ver registos</button>
+		<button type="submit" name="submit">Ver ementa</button>
 		<button type="reset" class="cancelbtn">Limpar dados</button>
 	</div>
 </form>
-
 
   </div>
 
