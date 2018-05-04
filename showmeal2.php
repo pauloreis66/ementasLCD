@@ -338,10 +338,28 @@ mysqli_close($ligacao);
 			<tr>
 				<td colspan="3" class="itop"><img src="mfundo.png" class="calendar"></td>
 			</tr>
+
+			<tr>
+				<td colspan="3" class="ibottom"><br /><br />
+				<?php
+					switch ($t) {
+						case 1: echo "<img src='0menuMed.png'>"; break;
+						case 2: echo "<img src='0menuVegan.png'>"; break;
+						case 3: echo "<img src='0menuSemOvo.png'>"; break;
+						case 4: echo "<img src='0menuSemLeite.png'>"; break;
+						case 5: echo "<img src='0menuSemOvoLeite.png'>"; break;
+						case 1: echo "<img src='0menuSemGluten.png'>"; break;
+						default:
+					}
+
+				?>
+				</td>
+			</tr>			
 		
 		</table>
 		
 	</div>
+
 </div>
 
 </body>
